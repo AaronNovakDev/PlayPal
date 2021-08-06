@@ -16,6 +16,10 @@ const User = new Schema({
     hash_password:{
         type: String,
         requried: true
+    },
+    isAdmin: {
+         type: Boolean,
+         default: false
     }
 })
 //This is to compare if the logged in password is the same as was given using bcrypt
