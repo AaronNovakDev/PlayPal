@@ -37,7 +37,6 @@ const Navigation =()=>{
             :   <>
                     <Link to="/LoginForm">Login</Link>
                     <Link to="/signup">Sign up</Link>
-                    hello
                 </>
             }
         </div>
