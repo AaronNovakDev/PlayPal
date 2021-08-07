@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useGlobalState } from '../utils/stateContext'
-import { signUp } from '../services/authService'
+import { signUp } from '../assets/services/authServices'
 
 const SignupForm =({history})=>{
     const {dispatch} = useGlobalState()

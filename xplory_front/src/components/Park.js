@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import { deletePark } from '../services/parkService'
+import { deletePark } from '../assets/services/parkServices'
 import { useGlobalState } from '../utils/stateContext'
 
 const Park =({park, history})=>{

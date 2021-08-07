@@ -1,4 +1,4 @@
-import xploryBack from "./config/back"
+import xploryBack from "../../config/back"
 
 export async function signUp(data){
     const response = await xploryBack.post("/auth/sign_up", data)

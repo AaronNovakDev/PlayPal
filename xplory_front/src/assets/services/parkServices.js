@@ -1,4 +1,4 @@
-import xploryBack from "https://xplory.herokuapp.com/"
+import xploryBack from "../../config/back"
 
 export async function getParks(){
     const response = await xploryBack.getParks("/xplory_back/models/park")

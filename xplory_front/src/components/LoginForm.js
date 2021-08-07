@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { useGlobalState } from '../utils/stateContext'
-import { signIn } from '../services/authService'
+import { signIn } from '../assets/services/authServices'
 
   const LoginForm =({history})=>{
         const {dispatch} = useGlobalState()

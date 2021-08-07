@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useGlobalState } from '../utils/stateContext'
-import { createPark } from '../services/parkServices'
+import { createPark } from '../assets/services/parkServices'
 
 const ParkForm =({history})=>{
     const {store, dispatch} = useGlobalState()
