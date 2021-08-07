@@ -1,43 +1,66 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
+import { useGlobalState } from '../utils/stateContext'
+import { signUp } from '../services/authService'
 
-import {Form,FormGroup,Input,Card,Button} from 'reactstrap'
+const SignupForm =({history})=>{
+    const {dispatch} = useGlobalState()
+    console.log(history)
+    const initialFormData = {
+        username: "",
+        email: "",
+        password: "", 
+        password_confirmation: ""
+    }
+    const [error, setError] = useState("")
+    const [formData, setFormData] = useState(initialFormData)
 
-import axios from 'axios'
-
-const SignupForm = (props) => {
-
-    const [form, setForm] = useState({email:'',password:''});
-
-    const onChange = (e) => setForm({...form,[e.target.name]:e.target.value})
-
-    const {email,password} = form;
-
-    const onSubmit = (e) => {
-        e.preventDefault();
-        console.log({form})
+    function handleFormData(e){
+        setFormData({
+            ...formData,
+            [e.target.name] : e.target.value
+        })
     }
 
+    function handleSubmit(e){
+        e.preventDefault()
+        signUp(formData)
+        .then(({username, jwt}) => {
+            sessionStorage.setItem("username", username)
+            sessionStorage.setItem("token", jwt)
+            dispatch({
+                type: "setLoggedInUser",
+                data: username
+            })
+            dispatch({
+                type: "setToken",
+                data: jwt
+            })
+            return history.push("/parks")
+        })
+        .catch(err => {
+            console.log(err)
+            setError(err.message)
+        })
+        
 
-    const login = async (form) => {
-        try {
-            const res = await axios.post('',form)
-        } catch (err) {
-            
-        }
     }
-    return <Card className='m-5 p-5 w-50 transform'> <Form onSubmit={onSubmit} >
-    <FormGroup>
-    <Input type='email' name='email' placeholder='Enter Email' value={email} onChange={onChange} />
-    </FormGroup>
-    
-    <FormGroup>
-    <Input type='password' name='password' placeholder='Enter Password' value={password} onChange={onChange} />
-    </FormGroup>
 
-    <FormGroup>
-    <Button className='w-25' color='primary' type='submit' >Sign up</Button>
-    </FormGroup>
-    </Form>
-    </Card>
+    return(
+        <div>
+            {error && <p>Error: {error}</p>}
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="text">Username:</label>
+                <input type="text" name="username" id="username" placeholder="Enter Username" value={formData.username} onChange={handleFormData}/>
+                <label htmlFor="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter Email" value={formData.email} onChange={handleFormData}/>
+                <label htmlFor="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Please enter your password" value={formData.password} onChange={handleFormData}/>
+                <label htmlFor="password">Confirm Password: </label>
+                <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Please re-enter your password" value={formData.password_confirmation} onChange={handleFormData}/>
+                <input type="submit" value="Sign up" />
+            </form>
+        </div>
+    )
 }
-export default SignupForm   
+
+export default SignupForm
