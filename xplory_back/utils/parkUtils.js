@@ -1,7 +1,8 @@
 const Park = require('../models/park')
 
 const getAllParks = function (req){
-    return Park.find({username: req.user.username})
+    // return Park.find({username: req.user.username})
+    return Park.find()
 }
 
 

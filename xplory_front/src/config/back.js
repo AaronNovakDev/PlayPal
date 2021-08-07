@@ -5,7 +5,7 @@ const xploryBack = axios.create({
 })
 
 xploryBack.interceptors.request.use(req => {
-    const token = sessionStorage.getPark("token")
+    const token = sessionStorage.getItem("token")
     console.log("interceptor token: ", token)
     if (token) {
         req.headers["Authorization"] = `Bearer ${token}`

@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import { useGlobalState } from '../utils/stateContext'
 import { signIn } from '../assets/services/authServices'
 
-  const LoginForm =({history})=>{
+  const LoginForm =({history, activateUser})=>{
         const {dispatch} = useGlobalState()
         const initialFormData = {
             email: "",

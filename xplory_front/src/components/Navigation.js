@@ -35,8 +35,9 @@ const Navigation =()=>{
 					<Link to="/filter">Filter</Link>
                 </> 
             :   <>
+                    <Link to="/LoginForm">Login</Link>
                     <Link to="/signup">Sign up</Link>
-                    Guest
+                    hello
                 </>
             }
         </div>
