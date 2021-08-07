@@ -53,10 +53,10 @@ const SignupForm =({history})=>{
                 <input type="text" name="username" id="username" placeholder="Enter Username" value={formData.username} onChange={handleFormData}/>
                 <label htmlFor="email">Email:</label>
                 <input type="email" name="email" id="email" placeholder="Enter Email" value={formData.email} onChange={handleFormData}/>
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Please enter your password" value={formData.password} onChange={handleFormData}/>
+                <label htmlFor="password">Password: </label>
+                <input type="password" name="password" id="password" placeholder="Enter password" value={formData.password} onChange={handleFormData}/>
                 <label htmlFor="password">Confirm Password: </label>
-                <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Please re-enter your password" value={formData.password_confirmation} onChange={handleFormData}/>
+                <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Re-enter password" value={formData.password_confirmation} onChange={handleFormData}/>
                 <input type="submit" value="Sign up" />
             </form>
         </div>

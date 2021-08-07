@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from "react"
-import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
+import {BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from "./Home"
 import About from "./About"
 import NotFound from "./NotFound"
@@ -9,15 +9,16 @@ import SignupForm from "./SignupForm"
 import ParkForm from "./ParkForm"
 import Parks from "./Parks"
 import Park from "./Park"
-import Maps from './Maps'
+// import Maps from './Maps'
 import Filter from "./Filter"
 import Friends from "./Friends"
 import reducer from '../utils/reducer'
 import { StateContext } from '../utils/stateContext'
+import { getParks } from '../assets/services/parkServices'
 
 const App = () => {
 	const initialstate ={
-		messageList: [],
+		parkList: [],
 		loggedInUser: sessionStorage.getItem("username") || null, 
 		auth: {token: sessionStorage.getItem("token") || null}
 	  }
@@ -35,13 +36,13 @@ const App = () => {
 	},[]
 	)
   
-	function getParks(id){
-		return parkList.find(m=> m.id === parseInt(id))
-	  }
+	// function getParks(id){
+	// 	return parkList.find(m=> m.id === parseInt(id))
+	//   }
 
 	return (
 		<div >
-      <h1>Chatti</h1>
+      <h1>Xplory</h1>
       <StateContext.Provider value={{store, dispatch}}>
         <BrowserRouter>
         <Navigation/>

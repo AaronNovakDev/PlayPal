@@ -31,9 +31,10 @@ const Navigation =()=>{
                     {loggedInUser}
                     <Link to="/newpark">Post a new park!</Link>
                     <Link to="/parks" onClick={logout}>Logout</Link>
+					<Link to="/friends">Friends</Link>
+					<Link to="/filter">Filter</Link>
                 </> 
             :   <>
-                    <Link to="/login">Login</Link>
                     <Link to="/signup">Sign up</Link>
                     Guest
                 </>

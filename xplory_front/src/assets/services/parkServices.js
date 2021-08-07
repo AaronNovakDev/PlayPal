@@ -1,7 +1,7 @@
-import xploryBack from "../../config/back"
+import xploryBack from '../../config/back'
 
 export async function getParks(){
-    const response = await xploryBack.getParks("/xplory_back/models/park")
+    const response = await xploryBack.getParks("/parks")
     console.log(response)
     return response.data
 }
