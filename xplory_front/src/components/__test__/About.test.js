@@ -1,26 +1,26 @@
-import About from "../About";
-import {render} from '@testing-library/react'
+// import About from "../About";
+// import {render} from '@testing-library/react'
 
-test('Should have Xplory in it', () => {
-    const { getByText } = render(<About />)
+// test('Should have Xplory in it', () => {
+//     const { getByText } = render(<About />)
 
-    expect(getByText('Xplory')).toBeInTheDocument()
-})
+//     expect(getByText('Xplory')).toBeInTheDocument()
+// })
 
-test('', () => {
-    const {} = render()
+// test('', () => {
+//     const {} = render()
 
-    expect(('')).toBeInTheDocument()
-})
+//     expect(('')).toBeInTheDocument()
+// })
 
-test('', () => {
-    const {} = render()
+// test('', () => {
+//     const {} = render()
 
-    expect(('')).toBeInTheDocument()
-})
+//     expect(('')).toBeInTheDocument()
+// })
 
-test('', () => {
-    const {} = render()
+// test('', () => {
+//     const {} = render()
 
-    expect(('')).toBeInTheDocument()
-})
+//     expect(('')).toBeInTheDocument()
+// })

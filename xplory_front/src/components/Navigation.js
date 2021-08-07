@@ -1,21 +1,45 @@
-import React from 'react';
-import Home from './Home';
-import Filter from './Filter';
-import About from './About';
-import LoginForm from './LoginForm';
+import React from 'react'
+import {Link} from 'react-router-dom'
+import { useGlobalState } from '../utils/stateContext'
 
 const Navigation =()=>{
-	return(
-		
-	<>
-	<Home/>
-	<Filter/>
-	<About/>
-	<LoginForm/>
-	
-	
-	</>	
-	)
+
+    const {store, dispatch} = useGlobalState()
+    const {loggedInUser} = store
+
+    function logout(e){
+        e.preventDefault()
+        console.log("logout")
+        sessionStorage.clear()
+        dispatch({
+            type: "setLoggedInUser",
+            data: null
+        })
+        dispatch({
+            type: "setToken",
+            data: null
+        })
+
+    }
+
+    return(
+        <div>
+            <Link to="/parks">Home</Link>
+            <Link to="/about">About</Link>
+            {loggedInUser ? 
+                <>
+                    {loggedInUser}
+                    <Link to="/newpark">Post a new park!</Link>
+                    <Link to="/parks" onClick={logout}>Logout</Link>
+                </> 
+            :   <>
+                    <Link to="/login">Login</Link>
+                    <Link to="/signup">Sign up</Link>
+                    Guest
+                </>
+            }
+        </div>
+    )
 }
 
 export default Navigation

@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-import {Form,FormGroup,Input,Card,Button} from 'reactstrap'
+import { Form, FormGroup, Input, Card, Button } from 'reactstrap'
 
 import axios from 'axios'
 
@@ -18,7 +18,7 @@ const LoginForm = (props) => {
     }
 
 
-    const login = async (form) => {
+    const Login = async (form) => {
         try {
             const res = await axios.post('',form)
         } catch (err) {
