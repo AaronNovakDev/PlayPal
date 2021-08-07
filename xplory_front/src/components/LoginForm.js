@@ -34,7 +34,7 @@ import { signIn } from '../services/authService'
                 })
             })
             .catch()
-            return history.push("/messages")
+            return history.push("/parks")
         }
     
         return(
