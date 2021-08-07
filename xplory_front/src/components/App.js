@@ -9,7 +9,6 @@ import SignupForm from "./SignupForm"
 import ParkForm from "./ParkForm"
 import Parks from "./Parks"
 import Park from "./Park"
-// import Maps from './Maps'
 import Filter from "./Filter"
 import Friends from "./Friends"
 import reducer from '../utils/reducer'
@@ -25,20 +24,20 @@ const App = () => {
 	  const [store, dispatch] = useReducer(reducer, initialstate )
  	  const {parkList} = store
 
-	  useEffect(()=>{
-		getParks()
-		.then((parks)=>{
-		  dispatch({
-			type: "setParkList",
-			data: parks
-		})})
-		.catch(error => console.log(error))
-	},[]
-	)
+	//   useEffect(() => {
+	// 	getParks()
+	// 	.then((parks) =>{
+	// 	  dispatch({
+	// 		type: "setParkList",
+	// 		data: parks
+	// 	})})
+	// 	.catch(error => console.log(error))
+	// },[]
+	// )
   
-	// function getParks(id){
-	// 	return parkList.find(m=> m.id === parseInt(id))
-	//   }
+	function getParks(id){
+		return parkList.find(m=> m.id === parseInt(id))
+	  }
 
 	return (
 		<div >
