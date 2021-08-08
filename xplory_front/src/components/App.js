@@ -14,10 +14,7 @@ import Friends from "./Friends"
 import reducer from '../utils/reducer'
 import { StateContext } from '../utils/stateContext'
 import { getParks } from '../assets/services/parkServices'
-import Appbar from '@material-ui/core/Appbar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+
 
 
 const App = () => {
@@ -54,16 +51,7 @@ const App = () => {
         <Navigation/>
         <Switch>
 		  
-  );
-
-			<Appbar>
-			<Toolbar>
-				<Typography variant="h6" style= {{ flexGrow: 1 }}>XPLORY</Typography>
-				<Button color="inherit">Home</Button>
-				<Button color="inherit">Filter</Button>
-				<Button color="inherit">About</Button>
-			</Toolbar>
-			</Appbar>
+  );	
 
 		<Route exact path='/Home' component={Home} />
 		<Route exact path='/Navigation' component={Navigation} />

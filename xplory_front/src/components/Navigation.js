@@ -1,6 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { useGlobalState } from '../utils/stateContext'
+import Appbar from '@material-ui/core/Appbar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 const Navigation =()=>{
 
@@ -24,21 +28,27 @@ const Navigation =()=>{
 
     return(
         <div>
-            <Link to="/parks">Home</Link>
-            <Link to="/about">About</Link>
+        <Appbar>
+			<Toolbar>
+				<Typography variant="h6" style= {{ flexGrow: 1 }}>XPLORY</Typography>
+        
+            <Button color="inherit"><Link to="/parks">Home</Link></Button>
+            <Button color="inherit"><Link to="/about">About</Link></Button>
             {loggedInUser ? 
                 <>
                     {loggedInUser}
-                    <Link to="/newpark">Post a new park!</Link>
-                    <Link to="/parks" onClick={logout}>Logout</Link>
-					<Link to="/friends">Friends</Link>
-					<Link to="/filter">Filter</Link>
+                     <Button color="inherit"><Link to="/newpark">Post a new park!</Link></Button>
+                     <Button color="inherit"><Link to="/parks" onClick={logout}>Logout</Link></Button>
+					 <Button color="inherit"><Link to="/friends">Friends</Link></Button>
+					 <Button color="inherit"><Link to="/filter">Filter</Link></Button>
                 </> 
             :   <>
-                    <Link to="/LoginForm">Login</Link>
-                    <Link to="/signup">Sign up</Link>
+                     <Button color="inherit"><Link to="/LoginForm">Login</Link></Button>
+                     <Button color="inherit"><Link to="/signup">Sign up</Link></Button>
                 </>
             }
+            </Toolbar>
+            </Appbar>
         </div>
     )
 }
