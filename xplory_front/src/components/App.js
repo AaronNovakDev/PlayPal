@@ -14,6 +14,11 @@ import Friends from "./Friends"
 import reducer from '../utils/reducer'
 import { StateContext } from '../utils/stateContext'
 import { getParks } from '../assets/services/parkServices'
+import Appbar from '@material-ui/core/Appbar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+// import {Toolbar} from '@material-ui/core'
+// import {Typography} from '@material-ui/core'
 
 const App = () => {
 	const initialstate ={
@@ -41,11 +46,21 @@ const App = () => {
 
 	return (
 		<div >
-      <h1>Xplory</h1>
+	
       <StateContext.Provider value={{store, dispatch}}>
         <BrowserRouter>
         <Navigation/>
         <Switch>
+		  
+  );
+
+			<Appbar>
+			<Toolbar>
+				<Typography><Route exact path='/Home' component={Home} />
+		</Typography>
+			</Toolbar>
+			</Appbar>
+
 		<Route exact path='/Home' component={Home} />
 		<Route exact path='/Navigation' component={Navigation} />
 		<Route exact path='/Filter' component={Filter} />
