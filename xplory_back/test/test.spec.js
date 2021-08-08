@@ -1,10 +1,10 @@
 const expect = require("expect")
 const mongoose = require("mongoose")
-const Post = require("../models/post")
-const {loadData, getAllParks, getParkById, addPark, deletePark, updatePark} = require("../utils/posts_utilities")
+const Park = require("../models/park")
+const {loadData, getAllParks, getParkById, addPark, deletePark, updatePark} = require("../utils/parkUtils")
 
-const dbConn = "process.env.MONGODB_URI"
-let postId = null
+const dbConn = process.env.MONGODB_URI
+let parkId = null
 
 before (done => connectToDb(done))
 
@@ -36,15 +36,15 @@ describe("getAllParks",()=>{
 	})
 })
 
-describe("getPostById",()=>{
+describe("getParkById",()=>{
 	it('username should be test', async function(){
 		let req = {
 			params:{
-				id: postId
+				id: parkId
 			}
 		};
-		await getPostById(req).exec((err,post)=>{
-			expect(post.username).toBe("test")
+		await getParkById(req).exec((err,park)=>{
+			expect(park.username).toBe("test")
 		})
 	})
 })
@@ -73,9 +73,9 @@ describe.only("updatePark", ()=>{
 			},
 			body:{
 				title: "Updated Park",
-				username: "test",
-				content: "Updated content",
-				category: "parks"
+				description: "test",
+				park_created: "1/1/2021",
+				park_modified: "2/2/2021"
 			}
 		};
 		await updatePark(req).exec((err, park)=>{
@@ -90,9 +90,9 @@ describe("deletePark", ()=>{
 				id: parkId
 			}
 		}
-		await deletePark(postId).exec()
-		await getParkById(req).exec((err,post)=>{
-			expect(post).toBe(null)
+		await deletePark(parkId).exec()
+		await getParkById(req).exec((err,park)=>{
+			expect(park).toBe(null)
 		})
 	})
 })
@@ -103,17 +103,17 @@ afterEach(done => {
 function connectToDb(done){
 	mongoose.connect(
 		dbConn,
-		{//Properties to avoid deprecation warnings
+		{
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 			useFindAndModify: false
 		},
-		err => {//handling errors
+		err => {
 			if (err){
-				console.log("Error connecting to database", err)
+				console.log("Sorry you have an error connecting to the Database", err)
 				done()
 			}else{
-				console.log("Connected to database!")
+				console.log("Successfully connected to the Database!")
 				done()
 			}
 		}
@@ -122,16 +122,16 @@ function connectToDb(done){
 
 function setupData(){
 	let date = Date.now()
-	let testPost = {};
-	testPost.title = "Test post"
-	testPost.username = "tester"
-	testPost.content = "This is the first test post"
-	testPost.create_date = date
-	testPost.modified_date = date
-	testPost.category = "";
-	return Post.create(testPost)
+	let testPark = {};
+	testPark.title = "Test post"
+	testPark.username = "test"
+	testPark.content = "This is the first test post"
+	testPark.create_date = date
+	testPark.modified_date = date
+	testPark.category = "";
+	return Park.create(testPark)
 }
 
 function tearDownData(){
-	return Post.deleteMany()
+	return Park.deleteMany()
 }
