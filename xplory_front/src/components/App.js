@@ -17,8 +17,8 @@ import { getParks } from '../assets/services/parkServices'
 import Appbar from '@material-ui/core/Appbar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-// import {Toolbar} from '@material-ui/core'
-// import {Typography} from '@material-ui/core'
+import Button from '@material-ui/core/Button';
+
 
 const App = () => {
 	const initialstate ={
@@ -28,6 +28,8 @@ const App = () => {
 	  }
 	  const [store, dispatch] = useReducer(reducer, initialstate )
  	  const {parkList} = store
+
+	   
 
 	//   useEffect(() => {
 	// 	getParks()
@@ -56,8 +58,9 @@ const App = () => {
 
 			<Appbar>
 			<Toolbar>
-				<Typography><Route exact path='/Home' component={Home} />
-		</Typography>
+				<Typography variant="h6">XPLORY</Typography>
+				<Button>Home</Button>
+		
 			</Toolbar>
 			</Appbar>
 
