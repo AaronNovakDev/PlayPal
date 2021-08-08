@@ -3,9 +3,13 @@ import {BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from "./Home"
 import About from "./About"
 import NotFound from "./NotFound"
+<<<<<<< HEAD
 import Navigation from "./Navigation"
 import LoginForm from "./LoginForm"
 import SignupForm from "./SignupForm"
+=======
+import Park from "./Park"
+>>>>>>> origin/not-sure
 import ParkForm from "./ParkForm"
 import Parks from "./Parks"
 import Park from "./Park"
