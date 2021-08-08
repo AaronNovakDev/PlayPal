@@ -45,14 +45,10 @@ const App = () => {
 
 	return (
 		<div >
-	
-      <StateContext.Provider value={{store, dispatch}}>
-        <BrowserRouter>
+        <StateContext.Provider value={{store, dispatch}}>	  	
+		<BrowserRouter>
         <Navigation/>
         <Switch>
-		  
-  );	
-
 		<Route exact path='/Home' component={Home} />
 		<Route exact path='/Navigation' component={Navigation} />
 		<Route exact path='/Filter' component={Filter} />

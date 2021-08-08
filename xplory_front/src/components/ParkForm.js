@@ -40,9 +40,9 @@ const ParkForm =({history})=>{
         <div>
             {loggedInUser?
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="text">Add a Park here, friend! {loggedInUser}?</label>
-                    <input type="text" name="m_text" id="m_text" value={formData.m_text} onChange={handleFormData}/>
-                    <input type="submit" value="Send" />
+                    <label htmlFor="text">Add a new park here, {loggedInUser}</label>
+                    <input type="text" name="m_text" id="m_text" placeholder="Park Name" value={formData.m_text} onChange={handleFormData}/>
+                    <input type="submit" value="Post" />
                 </form>
             : 
                 <p>Sorry, you will need to log in first to do that.</p>
