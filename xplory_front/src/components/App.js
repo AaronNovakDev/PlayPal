@@ -26,8 +26,6 @@ const App = () => {
 	  const [store, dispatch] = useReducer(reducer, initialstate )
  	  const {parkList} = store
 
-	   
-
 	//   useEffect(() => {
 	// 	getParks()
 	// 	.then((parks) =>{
@@ -44,7 +42,7 @@ const App = () => {
 	  }
 
 	return (
-		<div >
+		<div>
         <StateContext.Provider value={{store, dispatch}}>	  	
 		<BrowserRouter>
         <Navigation/>
