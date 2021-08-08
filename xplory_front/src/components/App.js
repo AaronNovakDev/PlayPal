@@ -13,7 +13,7 @@ import Filter from "./Filter"
 import Friends from "./Friends"
 import reducer from '../utils/reducer'
 import { StateContext } from '../utils/stateContext'
-import { getParks } from '../assets/services/parkServices'
+// import { getParks } from '../assets/services/parkServices'
 
 const App = () => {
 	const initialstate ={

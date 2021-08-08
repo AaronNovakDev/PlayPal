@@ -18,7 +18,7 @@ beforeEach(async function (){
 })
 
 describe("getAllParks",()=>{
-	it("should get a park if it exists", async function (){
+	it("should get a park if a park exists", async function (){
 		let req = {
 			query:{}
 		};
