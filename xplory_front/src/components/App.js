@@ -58,9 +58,10 @@ const App = () => {
 
 			<Appbar>
 			<Toolbar>
-				<Typography variant="h6">XPLORY</Typography>
-				<Button>Home</Button>
-		
+				<Typography variant="h6" style= {{ flexGrow: 1 }}>XPLORY</Typography>
+				<Button color="inherit">Home</Button>
+				<Button color="inherit">Filter</Button>
+				<Button color="inherit">About</Button>
 			</Toolbar>
 			</Appbar>
 
