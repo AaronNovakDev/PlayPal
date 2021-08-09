@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useGlobalState } from '../utils/stateContext'
 import { signUp } from '../assets/services/authServices'
+import {Card} from 'reactstrap'
 
 const SignupForm =({history})=>{
     const {dispatch} = useGlobalState()
@@ -46,7 +47,8 @@ const SignupForm =({history})=>{
     }
 
     return(
-        <div>
+        <div className="signup-form">
+            <Card className='g-4 transform'> 
             {error && <p>Error: {error}</p>}
             <form onSubmit={handleSubmit}>
                 <label htmlFor="text">Username:</label>
@@ -57,8 +59,9 @@ const SignupForm =({history})=>{
                 <input type="password" name="password" id="password" placeholder="Enter password" value={formData.password} onChange={handleFormData}/>
                 <label htmlFor="password">Confirm Password: </label>
                 <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Re-enter password" value={formData.password_confirmation} onChange={handleFormData}/>
-                <input type="submit" value="Sign up" />
+                <input id="btn" type="submit" value="Sign up" />
             </form>
+            </Card>
         </div>
     )
 }
