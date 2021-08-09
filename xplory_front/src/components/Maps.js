@@ -34,7 +34,7 @@ const marker = React.useRef(null);
     setMap(null)
   }, [])
     return (isLoaded ? (
-      <div className="map">
+      // <div className="map">
       <GoogleMap
       
         mapContainerStyle={containerStyle}
@@ -51,7 +51,7 @@ const marker = React.useRef(null);
 
     }} />
       </GoogleMap>
-      </div>
+      // </div>
   ) : <></>
     )
 }
