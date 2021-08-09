@@ -43,12 +43,14 @@ const App = () => {
 	  }
 
 	return (
-		<header class="top-nav">
-			<div className ="nav-links">
+		// <header>
+			<header classname="top-nav">
+			
         <StateContext.Provider value={{store, dispatch}}>	  	
 		<BrowserRouter>
         <Navigation/>
         <Switch>
+		<div id ="nav-links">
 		<Route exact path='/Home' component={Home} />
 		<Route exact path='/Navigation' component={Navigation} />
 		<Route exact path='/Filter' component={Filter} />
@@ -60,11 +62,12 @@ const App = () => {
 		<Route exact path='/Parks' component={Parks} />
 		<Route exact path='/NotFound' component={NotFound} />
 		<Route exact path='/Signup' component={SignupForm} />
+		</div>
 		</Switch>
         </BrowserRouter>
       </StateContext.Provider>    
-	  </div>
-    </header>
+	  </header>
+    // </header>
 	);
 };
 

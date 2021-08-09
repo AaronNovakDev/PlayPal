@@ -2,7 +2,7 @@ import React from 'react'
 
 const Filter = ()=>{
     return(
-        <div>
+        <div className="filter">
             <p>This is the filter page , please enter what you would like to filter through</p>
         </div>
     )
