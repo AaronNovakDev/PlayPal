@@ -14,6 +14,7 @@ import Friends from "./Friends"
 import reducer from '../utils/reducer'
 import { StateContext } from '../utils/stateContext'
 import { getParks } from '../assets/services/parkServices'
+import './style.scss';
 
 
 
@@ -42,7 +43,8 @@ const App = () => {
 	  }
 
 	return (
-		<div>
+		<header class="top-nav">
+			<div className ="nav-links">
         <StateContext.Provider value={{store, dispatch}}>	  	
 		<BrowserRouter>
         <Navigation/>
@@ -61,7 +63,8 @@ const App = () => {
 		</Switch>
         </BrowserRouter>
       </StateContext.Provider>    
-    </div>
+	  </div>
+    </header>
 	);
 };
 
