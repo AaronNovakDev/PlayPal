@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-<<<<<<< HEAD
 import { useGlobalState } from '../utils/stateContext'
 import { signIn } from '../assets/services/authServices'
 
@@ -17,32 +16,6 @@ import { signIn } from '../assets/services/authServices'
                 ...formData,
                 [e.target.name] : e.target.value
             })
-=======
-
-import {Form,FormGroup,Input,Card,Button} from 'reactstrap'
-
-import axios from 'axios'
-
-
-const LoginForm = (props) => {
-
-    const [form, setForm] = useState({email:'',password:''});
-
-    const onChange = (e) => setForm({...form,[e.target.name]:e.target.value})
-
-    const {email,password} = form;
-
-    const onSubmit = (e) => {
-        e.preventDefault();
-        console.log({form})
-    }
-    
-    const login = async (form) => {
-        try {
-            const res = await axios.post('',form)
-        } catch (err) {
-            
->>>>>>> origin/not-sure
         }
     
         function handleSubmit(e){
@@ -76,25 +49,6 @@ const LoginForm = (props) => {
             </div>
         )
     }
-<<<<<<< HEAD
     
     export default LoginForm
     
-=======
-    return <Card className='m-5 p-5 w-50 transform'> <Form onSubmit={onSubmit} >
-    <FormGroup>
-    <Input type='email' name='email' placeholder='Enter Email Address' value={email} onChange={onChange} />
-    </FormGroup>
-    
-    <FormGroup>
-    <Input type='password' name='password' placeholder='Enter Password' value={password} onChange={onChange} />
-    </FormGroup>
-
-    <FormGroup>
-    <Button className='w-50' color='primary' type='submit' >Login</Button>
-    </FormGroup>
-    </Form>
-    </Card>
-}
-export default LoginForm
->>>>>>> origin/not-sure
