@@ -7,7 +7,7 @@ test('Should have Xplory in it', () => {
     expect(getByText('Xplory')).toBeInTheDocument()
 })
 
-test('', () => {
+test('should login', () => {
     const {} = render()
 
     expect(('')).toBeInTheDocument()
