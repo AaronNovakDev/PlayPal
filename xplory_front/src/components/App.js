@@ -14,7 +14,7 @@ import Friends from "./Friends"
 import reducer from '../utils/reducer'
 import { StateContext } from '../utils/stateContext'
 import { getParks } from '../assets/services/parkServices'
-import './main.scss'
+import './style/main.scss'
 
 
 

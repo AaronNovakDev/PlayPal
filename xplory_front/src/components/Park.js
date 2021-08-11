@@ -21,7 +21,7 @@ const Park =({park, history})=>{
         <div>
             {park? 
             <>
-                <div>
+                <div className="park">
                     <Link to={`/parks/${park.id}`} ><h4>{park.title}</h4></Link>
                     <Link to={`/parks/${park.id}`} ><h4>{park.description}</h4></Link>
                     <Link to={'/parks'}><h3 onClick={removePark}>X</h3></Link>
