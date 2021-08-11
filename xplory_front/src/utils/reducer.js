@@ -9,7 +9,7 @@ export default function reducer(state, action){
 case "addPark":{
     return {
         ...state,
-        parkList: [action.data, ...state.itemList]
+        parkList: [action.data, ...state.parkList]
         
     }
 }
