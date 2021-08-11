@@ -8,7 +8,8 @@ const ParkForm =({history})=>{
     const {loggedInUser} = store
 
     const initialFormData = {
-        m_text: ""
+        title: "",
+        description: ""
     }
 
     const [formData, setFormData] = useState(initialFormData)
@@ -43,7 +44,8 @@ const ParkForm =({history})=>{
             {loggedInUser?
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="text">Add a new park here, {loggedInUser}</label>
-                    <input type="text" name="m_text" id="m_text" placeholder="Park Name" value={formData.m_text} onChange={handleFormData}/>
+                    <input type="text" name="title" id="title" placeholder="Park Name" value={formData.title} onChange={handleFormData}/>
+                    <input type="text" name="description" id="description" placeholder="Description" value={formData.description} onChange={handleFormData}/>
                     <input id="btn" type="submit" value="Post" />
                 </form>
             : 
