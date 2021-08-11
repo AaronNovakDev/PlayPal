@@ -39,11 +39,11 @@ const ParkForm =({history})=>{
 
 
     return(
-        <div>
+        <div className="park-form">
         <Card className='m-5 p-5 w-50 transform'>
             {loggedInUser?
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="text">Add a new park here, {loggedInUser}</label>
+                    <label htmlFor="text">Add a new park here,  {loggedInUser}</label>
                     <input type="text" name="title" id="title" placeholder="Park Name" value={formData.title} onChange={handleFormData}/>
                     <input type="text" name="description" id="description" placeholder="Description" value={formData.description} onChange={handleFormData}/>
                     <input id="btn" type="submit" value="Post" />
