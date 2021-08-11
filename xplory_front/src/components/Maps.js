@@ -1,5 +1,5 @@
-import React from 'react'
-import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import React,{useState,useCallback} from 'react'
+import { GoogleMap, useJsApiLoader, Marker, } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '50%',
@@ -12,14 +12,14 @@ const center = {
 };
 
 
-const Maps = () => {
+function  MyComponent() {
     const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: "AIzaSyDIBoKdzvsBBqkwRpuXsEZ0-UjG98CC4zk"
   })
-  const [map, setMap] = React.useState(null)
+  const [map, setMap] = useState(null)
 
-  const onLoad = React.useCallback(function callback(map) {
+  const onLoad = useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
     map.fitBounds(bounds);
     setMap(map)
@@ -56,4 +56,4 @@ const marker = React.useRef(null);
     )
 }
 
-export default Maps
+export default MyComponent

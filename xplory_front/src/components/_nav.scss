@@ -1,0 +1,33 @@
+#header
+{
+#top-nav{
+    padding: 120px;
+    background-color: #3877B7; 
+    font-size: medium; 
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    text-transform: uppercase;
+    }
+    
+}
+#nav-links{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+a {
+    // width: 50px;
+    text-decoration: none;
+    padding: 1em;
+    height: 1em;
+    // border-bottom: 3px solid ;
+&:hover {
+    padding: 1em 1.5em;
+    border-radius: 50%;
+    font-size: larger;
+    color: olive;
+    text-decoration: none;
+}
+}
