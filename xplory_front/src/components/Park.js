@@ -32,7 +32,7 @@ const Park =({park, history})=>{
             :
                 <>
                     <p>Sorry thats an invalid ID for a park</p>
-                    <Link to="/parks">Back to the home page</Link>
+                    <Link to="/home">Back to the home page</Link>
                 </>
             }
         </div>

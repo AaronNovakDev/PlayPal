@@ -2,6 +2,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { useGlobalState } from '../utils/stateContext'
+import './style.scss'
 
 const Navigation =()=>{
 
@@ -25,13 +26,13 @@ const Navigation =()=>{
 
     return(
         <div>
-           <Link to="/parks">Home</Link>
+           <Link to="/home">Home</Link>
            <Link to="/about">About</Link>
             {loggedInUser ? 
                 <>
                     {loggedInUser}
-                     <Link to ="/ParkForm">Add New Park</Link>
-                     <Link to ="/Park">Your Parks</Link>
+                     <Link to ="/ParkForm">Create Park</Link>
+                     <Link to ="/Parks">Park</Link>
 					 <Link to="/friends">Friends</Link>
 					 <Link to="/filter">Park Filter</Link>
                      <Link to="/parks" onClick={logout}>Logout</Link>
