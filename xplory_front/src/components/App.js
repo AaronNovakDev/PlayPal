@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react"
+import React, { useReducer } from "react"
 import {BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from "./Home"
 import About from "./About"
@@ -29,11 +29,12 @@ const App = () => {
 
 	//   useEffect(() => {
 	// 	getParks()
-	// 	.then((parks) =>{
+	// 	.then((Parks) =>{
 	// 	  dispatch({
 	// 		type: "setParkList",
-	// 		data: parks
-	// 	})})
+	// 		data: Parks
+	// 	})
+	// })
 	// 	.catch(error => console.log(error))
 	// },[]
 	// )

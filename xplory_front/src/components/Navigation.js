@@ -2,7 +2,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { useGlobalState } from '../utils/stateContext'
-import './style.scss'
 
 const Navigation =()=>{
 

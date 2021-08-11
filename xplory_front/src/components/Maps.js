@@ -2,13 +2,13 @@ import React from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 const containerStyle = {
-  width: '100%',
-  height: '500px'
+  width: '50%',
+  height: '500px',
 };
 
 const center = {
-  lat: -3.745,
-  lng: -38.523
+  lat: -27.470125,
+  lng: 153.021072
 };
 
 
@@ -26,8 +26,8 @@ const Maps = () => {
   }, [])
 
 const position = {
-  lat: 37.772,
-  lng: -122.214
+  lat: -27.470125,
+  lng: 153.021072
 }
 const marker = React.useRef(null);
   const onUnmount = React.useCallback(function callback(map) {
