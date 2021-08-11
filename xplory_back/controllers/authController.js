@@ -22,10 +22,10 @@ const signIn = function (req, res) {
             return res.json({error: err.message})
         }
         if (!user || !user.comparePassword(req.body.password)){
-            return res.status(400)
+            return res.status(400) 
             return res.json({message: "Sorry, you're Authentication has failed im afraid"})
         }
-        return res.json({username: user.username, jwt: jwt.sign({username: user.username, email: user.email, _id: user._id},"wh4t-4-gr34t-s3cr3t-key")})
+        return res.json({username: user.username, jwt: jwt.sign({username: user.username, email: user.email, _id: user._id}, process.env.SECRET_KEY)})
     })
 }
 
