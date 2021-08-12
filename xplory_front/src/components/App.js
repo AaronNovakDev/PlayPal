@@ -45,13 +45,13 @@ const App = () => {
 
 	return (
 		// <header>
-			<header classname="top-nav">
+			// <header classname="top-nav">
 			
         <StateContext.Provider value={{store, dispatch}}>	  	
 		<BrowserRouter>
         <Navigation/>
         <Switch>
-		<div id ="nav-links">
+		<div>
 		<Route exact path='/Home' component={Home} />
 		<Route exact path='/Navigation' component={Navigation} />
 		<Route exact path='/Filter' component={Filter} />
@@ -67,7 +67,7 @@ const App = () => {
 		</Switch>
         </BrowserRouter>
       </StateContext.Provider>    
-	  </header>
+	//   </header>
     // </header>
 	);
 };

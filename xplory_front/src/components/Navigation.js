@@ -25,11 +25,12 @@ const Navigation =()=>{
     }
 
     return(
-        <div>
+    <div id="top-nav">
+        <div id="nav-links">
            <Link to="/home">Home</Link>
            <Link to="/about">About</Link>
             {loggedInUser ? 
-                <>
+                <>  
                     {loggedInUser}
                      <Link to ="/ParkForm">Create Park</Link>
                      <Link to ="/Parks">Park</Link>
@@ -42,7 +43,9 @@ const Navigation =()=>{
                      <Link to="/signup">Sign up</Link>
                 </>
             }
+            </div>
         </div>
+    
     )
 }
 

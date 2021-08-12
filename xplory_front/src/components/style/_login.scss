@@ -1,23 +1,30 @@
 .login-form{
     margin-top:20px;
-    color: #3877B7;
+    // color: #3877B7;
     padding: 100px 100px 100px 100px;
     justify-content: space-around;
+    // display: block;
+    // box-sizing: border-box;
+    
+    
 .loginform
 label {
-        display: flex;
+        // display: flex;
         flex-direction: row;
         justify-content: flex-end;
         text-align: right;
         width: 400px;
         line-height: 26px;
         margin-bottom: 10px;
+        $font-color: pink;
+        position: fixed;
       }
       
 #input {
         height: 20px;
         flex: 0 0 200px;
         margin-left: 10px;
+        position: fixed;
       }
     }
 
@@ -26,11 +33,13 @@ label {
     $font-color: #FAFAFA;
     border: 110; 
     border-radius: 15px 15px 15px 15px;
-    width: 25%;
+    width: 50%;
     padding: 15px;
     margin-top: 15px;
     background-color: #3877B7;
     text-decoration: none;
+    align-items: center;
+
   }
 
   

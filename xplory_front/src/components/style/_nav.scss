@@ -1,16 +1,13 @@
-#header
-{
 #top-nav{
-    padding: 120px;
-    background-color: #3877B7; 
+    padding: 10px;
+    margin-bottom: 20px;
+    // background-color: #3877B7; 
     font-size: medium; 
     grid-area: nav;
     display: flex;
     justify-content: space-around;
     text-decoration: none;
-    text-transform: uppercase;
-    }
-    
+
 }
 #nav-links{
     color: white;
@@ -28,6 +25,6 @@ a {
     border-radius: 50%;
     font-size: larger;
     color: olive;
-    text-decoration: none;
+    text-decoration:none
 }
 }
