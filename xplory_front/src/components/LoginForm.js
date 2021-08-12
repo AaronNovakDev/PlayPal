@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { useGlobalState } from '../utils/stateContext'
 import { signIn } from '../assets/services/authServices'
-import {Card} from 'reactstrap'
+// import {Card} from 'reactstrap'
 
   const LoginForm =({history, activateUser})=>{
         const {dispatch} = useGlobalState()

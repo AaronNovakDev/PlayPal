@@ -42,8 +42,7 @@ const App = () => {
 	  }
 
 	return (
-		// <header>
-			// <header classname="top-nav">
+		
 			
         <StateContext.Provider value={{store, dispatch}}>	  	
 		<BrowserRouter>
