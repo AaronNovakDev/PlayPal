@@ -12,14 +12,14 @@ export async function getMyParks(){
 }
 
 export async function createPark(data){
-    const response = await xploryBack.post("/park", data)
+    const response = await xploryBack.post("/parks", data)
     console.log(response.data)
     return response.data
 
 }
 
 export async function deletePark(id){
-    const response = await xploryBack.delete("/park/${id}")
+    const response = await xploryBack.delete(`/park/${id}`)
     return response.data
 
 }   

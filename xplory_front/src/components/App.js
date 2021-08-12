@@ -1,4 +1,4 @@
-import React, { useReducer } from "react"
+import React, { useEffect, useReducer } from "react"
 import {BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from "./Home"
 import About from "./About"
@@ -25,21 +25,21 @@ const App = () => {
 	  const [store, dispatch] = useReducer(reducer, initialstate )
  	  const {parkList} = store
 
-	//   useEffect(() => {
-	// 	getParks()
-	// 	.then((Parks) =>{
-	// 	  dispatch({
-	// 		type: "setParkList",
-	// 		data: Parks
-	// 	})
-	// })
-	// 	.catch(error => console.log(error))
-	// },[]
-	// )
+	  useEffect(() => {
+		getParks()
+		.then((Parks) =>{
+		  dispatch({
+			type: "setParkList",
+			data: Parks
+		})
+	})
+		.catch(error => console.log(error))
+	},[]
+	)
   
-	// function getParks(id){
-	// 	return parkList.find(m=> m.id === parseInt(id))
-	//   }
+	function getParks(id){
+		return parkList.find(p=> p.id === id)
+	  }
 
 	return (
 		// <header>
