@@ -40,15 +40,15 @@ import {Card} from 'reactstrap'
     
         return(
             <div className="login-form">
-            <Card className='m-5 p-5 w-50 transform'> 
+            {/* <Card className='m-5 p-5 w-50 transform'>  */}
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="email">Email: </label>
                     <input type="email" name="email" id="email" value={formData.email} onChange={handleFormData}/>
                     <label htmlFor="password">Password </label>
                     <input type="password" name="password" id="password" value={formData.password} onChange={handleFormData}/>
-                    <input id="btn" type="submit" value="Login" />
+                    <div><input id="btn" type="submit" value="Login" /></div>
                 </form>
-            </Card>
+            {/* </Card> */}
             </div>
         )
     }
