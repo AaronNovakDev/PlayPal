@@ -10,7 +10,7 @@ const getParks = function (req, res){
     })
 }
 
-const getPark = function (req, res){
+const getPark = function (req, res) {
     getParkById(req.params.id).exec((err, parks) => {
         if (err) {
             res.status(500)
@@ -20,7 +20,7 @@ const getPark = function (req, res){
     })
 }
 
-const newPark = function (req, res){
+const newPark = function (req, res) {
     addPark(req).save((err, park) => {
         if (err) {
             res.status(500)
@@ -30,9 +30,9 @@ const newPark = function (req, res){
     })
 }
 
-const removePark = function(req){
+const removePark = function(req) {
     deletePark(req.params.id).exec((err)=>{
-        if (err){
+        if (err) {
             res.status(404)
             return res.json({error: err.message})   
         }

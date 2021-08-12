@@ -14,15 +14,15 @@ const addPark = function (req){
     return Park(req.body)
 }
 
-const getParkById = function(id){
+const getParkById = function(id) {
     return Park.findById(id)
 }
 
-const deletePark = function(id){
+const deletePark = function(id) {
     return Park.findByIdAndDelete(id)
 }
 
-const updatePark = function(req){
+const updatePark = function(req) {
     req.body.park_modified = Date.now() 
     return Park.findByIdAndUpdate(req.params.id, req.body, {new: true})
 }
