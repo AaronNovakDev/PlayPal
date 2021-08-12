@@ -37,7 +37,7 @@ const App = () => {
 	},[]
 	)
   
-	function getParks(id){
+	function getPark(id){
 		return parkList.find(p=> p.id === id)
 	  }
 

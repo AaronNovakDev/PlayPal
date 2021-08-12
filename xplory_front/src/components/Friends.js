@@ -1,5 +1,8 @@
 import React from 'react';
-
+import david from '../pics/david.jpg'
+import bruce from '../pics/bruce.jpg'
+import arnold from '../pics/arnold.jpg'
+import bobby from '../pics/bobby.jpg'
 
 const Friends = () => {
     return(
@@ -8,9 +11,13 @@ const Friends = () => {
             <p>
                 <ul>
                   <li>David Attenborough</li>
+                    <img src={david} alt="david" />
                   <li>Bruce Lee</li>
-                  <li>Barrack Obama</li>
+                    <img src={bruce} alt="bruce" />
+                  <li>Arnold Swarzenegger</li>
+                    <img src={arnold} alt="arnold" />
                   <li>Bobby Brown</li>
+                    <img src={bobby} alt="bobby" />
                  </ul>
             </p>
         </div>

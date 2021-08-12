@@ -24,8 +24,11 @@ const Navigation =()=>{
 
     }
 
+    
     return(
+        
     <div id="top-nav">
+       
         <div id="nav-links">
            <Link to="/home">Home</Link>
            <Link to="/about">About</Link>
