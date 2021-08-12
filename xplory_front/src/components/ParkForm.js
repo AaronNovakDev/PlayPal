@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useGlobalState } from '../utils/stateContext'
 import { createPark } from '../assets/services/parkServices'
 import {Card} from 'reactstrap'
+import {Link} from 'react-router-dom'
 
 const ParkForm =({history})=>{
     const {store, dispatch} = useGlobalState()
@@ -49,7 +50,9 @@ const ParkForm =({history})=>{
                     <input id="btn" type="submit" value="Post" />
                 </form>
             : 
-                <p>Sorry, you will need to log in first to do that.</p>
+                <p>Sorry, you will need to log in first to do that.
+                <Link to="/signup">Create Account</Link></p>
+                
             }
           </Card>  
         </div>
