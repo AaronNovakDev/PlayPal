@@ -14,7 +14,7 @@ case "addPark":{
     }
 }
 case "deletePark": {
-    const updatedParkList = state.parkList.filter((park)=>
+    const updatedParkList = state.parkList.filter(park =>
     park.id !== parseInt(action.data)
     )
     return {

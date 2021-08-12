@@ -16,8 +16,6 @@ import { StateContext } from '../utils/stateContext'
 import { getParks } from '../assets/services/parkServices'
 import './style/main.scss'
 
-
-
 const App = () => {
 	const initialstate ={
 		parkList: [],
@@ -39,12 +37,11 @@ const App = () => {
 	// },[]
 	// )
   
-	function getParks(id){
-		return parkList.find(m=> m.id === parseInt(id))
-	  }
+	// function getParks(id){
+	// 	return parkList.find(m=> m.id === parseInt(id))
+	//   }
 
 	return (
-		// <header>
 			<header classname="top-nav">
 			
         <StateContext.Provider value={{store, dispatch}}>	  	
@@ -68,7 +65,6 @@ const App = () => {
         </BrowserRouter>
       </StateContext.Provider>    
 	  </header>
-    // </header>
 	);
 };
 
