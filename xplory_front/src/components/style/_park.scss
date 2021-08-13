@@ -3,8 +3,28 @@
     color: #3877B7;
     padding: 100px 100px 100px 100px;
     justify-content: space-around;
-    $font-color: pink;
+    $font-color: black;
 }
+label {
+    // display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: top;
+    width: 400px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    $font-color: pink;
+    position: sticky;
+  }
+  
+#input {
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 10px;
+    position: fixed;
+  }
+
+
 
 #btn{  
     $font-color: #FAFAFA;
@@ -13,6 +33,6 @@
     width: 25%;
     padding: 15px;
     margin-top: 15px;
-    background-color: #3877B7;
+    background-color: #7aacfa;
     text-decoration: none;
   }
