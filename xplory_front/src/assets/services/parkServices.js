@@ -24,6 +24,7 @@ export async function deletePark(id){
 
 }   
 export async function changePark(id){
-    const response = await xploryBack.updatePark(`/park/${id}`)
+    console.log(id)
+    const response = await xploryBack.put(`/parks/${id}`)
     return response.data
 }
