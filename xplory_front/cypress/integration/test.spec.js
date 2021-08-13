@@ -49,7 +49,7 @@ beforeEach(() => {
 
         it("requires a username", () => {
 
-            cy.get("[data-cy=signup-email]").type("Newuser@test.com" + Date.now())
+            cy.get("[data-cy=signup-email]").type("newuser@test.com" + Date.now())
             cy.get("[data-cy=signup-password]").type("Abcd1234")
             cy.get("[data-cy=signup-passwordConfirmation]").type("Abcd1234")
 
