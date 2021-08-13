@@ -30,15 +30,18 @@ const newPark = function (req, res) {
     })
 }
 
-const removePark = function(req) {
+const removePark = function(req, res) {
     deletePark(req.params.id).exec((err)=>{
         if (err) {
             res.status(404)
-            return res.json({error: err.message})   
+            return res.json({error: err.message})
         }
         res.sendStatus(204)
     })
 }
+
+
+
 
 const changePark = function(req, res){
     updatePark(req).exec((err, park)=>{
