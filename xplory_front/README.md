@@ -1,24 +1,32 @@
 # Hello and Welcome to Xplory!
-This is where we will add infomation on how to use this application and add in all the new updated we do.
+Xplory website is to showcase all the parks and parklands around an area of choice, in Australia.
+We will be adding functions like whether or not it has restrooms, dog fence, shelter, lighting, and much more. It would include information about Accessibility, restroom, entry for dogs, location of the nearest cafes, exercise equipment and other facilities, Parking etc.
 
 # Demonstrate separation of concerns in the App.
 - Utilized MVC for the back end Express server.
 - Followed traditional "silo" method for  our front end.
 
 # Demonstrate DRY (Don’t Repeat Yourself) principles in all code.
+- We have applied DRY principal to database schemas, test plans, the build system and also to Documentation.
+  We have avoided CSS and code duplication in order to run the program more efficiently faster.In depth we have 
+  used nested selectors, shorthand properties and grouping selectors.
 
 # Appropriate use of libraries used in the app
 - Back-end utilized libraries - Express, body-parser, Cors, Axios, Dotenv, Mongoose, Mocha/Chai, JSONWebToken.
 - Express our first library is for our server
-- Front-end utilize libraries - Material-UI, Styled Components, React Router, 
+- Front-end utilize libraries - React Strap, Styled Components, React Router, Node Sass
 
 # Demonstrate code flow control
+-Use of if..else, Switch ,Case in program demonstrate that we have implemented adequate lines of 
+code flow control to our Project.It structure the program for the website.
 
 # Demonstrate use of functions
-- Implemented
+-We implemented data for executing the result the way functions should perform. Through out the website 
+components we have used various functions in order to implement planned execution of the application.
 
 # Apply Object oriented principles/patterns
-- Implemented
+- Out of four object oriented principals we mainly follow the inheritance princiapal for achieving the patterns
+for object oriented programming.
 
 # Employ and utilise proper source control methodology
 - We used GitHub with many commits as we would create the code.
@@ -52,6 +60,6 @@ User interface
 ## Formal testing framework
 - We are using mocha & chai to do testing on the back end.
 - We are using Cypress to test the front end functionality.
-  - We also have manual test sheets for the front end, completed by users. 
+-We also have manual test sheets for the front end, completed by users. 
 
 
