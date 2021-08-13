@@ -1,3 +1,6 @@
+// body{
+//     $font-color: black;
+// }
 #top-nav{
     padding: 10px;
     margin-bottom: 20px;
@@ -7,12 +10,15 @@
     display: flex;
     justify-content: space-around;
     text-decoration: none;
+    background-color: #7aacfa;
+    $font-color:white;
 
 }
 #nav-links{
-    color: white;
+    // color: white;
     text-align: center;
     text-decoration: none;
+    $font-color: white;
 }
 a {
     // width: 50px;
@@ -20,11 +26,14 @@ a {
     padding: 1em;
     height: 1em;
     // border-bottom: 3px solid ;
+    $font-color:white;
 &:hover {
     padding: 1em 1.5em;
     border-radius: 50%;
-    font-size: larger;
-    color: olive;
-    text-decoration:none
+    text-decoration:none;
+    font-size: 28px;
+    transition: all 50ms;
+    font-size-adjust: 10px;
+    $font-color: white;
 }
 }
