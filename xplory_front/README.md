@@ -1,6 +1,10 @@
 # Hello and Welcome to Xplory!
 This is where we will add infomation on how to use this application and add in all the new updated we do.
 
+The servers can take time to let you login or create an account if you have difficulties try logging in with the account
+name: jelly
+password: cheese
+
 # Demonstrate separation of concerns in the App.
 - Utilized MVC for the back end Express server.
 - Followed traditional "silo" method for  our front end.
