@@ -48,7 +48,7 @@ const SignupForm =({history})=>{
 
     return(
         <div className="signup-form">
-            <Card className='g-4 transform'> 
+            <Card className='g-5 transform'> 
             {error && <p>Error: {error}</p>}
             <form onSubmit={handleSubmit}>
                 <label htmlFor="text">Username:</label>
