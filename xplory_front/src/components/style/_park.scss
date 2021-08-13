@@ -4,6 +4,7 @@
     padding: 100px 100px 100px 100px;
     justify-content: space-around;
     $font-color: black;
+    margin:left;
 }
 label {
     // display: flex;
@@ -15,6 +16,7 @@ label {
     margin-bottom: 10px;
     $font-color: pink;
     position: sticky;
+    margin:left;
   }
   
 #input {
@@ -22,6 +24,7 @@ label {
     flex: 0 0 200px;
     margin-left: 10px;
     position: fixed;
+    margin:left;
   }
 
 
@@ -35,11 +38,15 @@ label {
     margin-top: 15px;
     background-color: #7aacfa;
     text-decoration: none;
+    margin:left;
   }
   .parktitle{
     position: relative;
     text-transform: uppercase;
     font-size: large;
-    font-weight: 900;
-    text-align: center;
+    font-weight: 500;
+    text-align: left;
+    $font-color: white;
+    
   }
+ 
