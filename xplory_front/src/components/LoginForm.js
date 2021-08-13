@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { useGlobalState } from '../utils/stateContext'
 import { signIn } from '../assets/services/authServices'
-// import {Card} from 'reactstrap'
+import {Card} from 'reactstrap'
 
   const LoginForm =({history, activateUser})=>{
         const {dispatch} = useGlobalState()
@@ -40,7 +40,7 @@ import { signIn } from '../assets/services/authServices'
     
         return(
             <div className="login-form">
-            {/* <Card className='m-5 p-5 w-50 transform'>  */}
+            <Card className='m-5 p-5 w-50 transform'> 
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="email">Email: </label>
                     <input type="email" name="email" id="email" value={formData.email} onChange={handleFormData}/>
@@ -48,7 +48,7 @@ import { signIn } from '../assets/services/authServices'
                     <input type="password" name="password" id="password" value={formData.password} onChange={handleFormData}/>
                     <div><input id="btn" type="submit" value="Login" /></div>
                 </form>
-            {/* </Card> */}
+            </Card>
             </div>
         )
     }
