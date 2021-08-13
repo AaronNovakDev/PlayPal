@@ -59,7 +59,7 @@ const SignupForm =({history})=>{
                 <input type="password" name="password" id="password" placeholder="Enter password" value={formData.password} onChange={handleFormData}/>
                 <label htmlFor="password">Confirm Password: </label>
                 <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Re-enter password" value={formData.password_confirmation} onChange={handleFormData}/>
-                <input id="btn" type="submit" value="Sign up" />
+                <input id="btn" type="submit" value="Sign up" data-cy="signup-button" />
             </form>
             </Card>
         </div>
