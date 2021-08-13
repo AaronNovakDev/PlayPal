@@ -35,7 +35,7 @@ const ParkForm =({history})=>{
             })
             .catch(error => {
                 console.log(error)})
-        return history.push("/Park")
+        return history.push("/Parks")
     }
 
 
