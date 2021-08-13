@@ -7,7 +7,7 @@ const Parks =()=>{
     const {parkList} = store
     console.log(parkList)
     return(
-        <div>
+        <div class="parktitle">
             <h1>Your Parks</h1>
             {parkList.map((park, index)=>
                 <Park key={park.id} park={park}/>

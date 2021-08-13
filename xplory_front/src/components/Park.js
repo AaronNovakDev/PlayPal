@@ -22,13 +22,16 @@ const Park =({park, history})=>{
         <div>
             {park? 
             <>
-                <div className="parks">
+                {/* <div className="parks">
+                        <div class="inner"> */}
                     <Link to={`/parks/${park.id}`} ><h4>{park.title}</h4></Link>
-                    <h4>{park.description}</h4>
+                            
+                    <h4 class="title">{park.description}</h4>
                     <Link to={'/parks'}><h3 onClick={removePark}>Delete</h3></Link>
                     <Link to={'/parks'}><h3 onClick={changePark}>Update</h3></Link>
                     <p>{park.username} {park.posted}</p>
-                </div>
+                {/* </div>
+                </div> */}
                 
             </>
             :
