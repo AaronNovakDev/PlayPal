@@ -2,6 +2,10 @@
 Xplory website is to showcase all the parks and parklands around an area of choice, in Australia.
 We will be adding functions like whether or not it has restrooms, dog fence, shelter, lighting, and much more. It would include information about Accessibility, restroom, entry for dogs, location of the nearest cafes, exercise equipment and other facilities, Parking etc.
 
+The servers can take time to let you login or create an account if you have difficulties try logging in with the account
+name: jelly
+password: cheese
+
 # Demonstrate separation of concerns in the App.
 - Utilized MVC for the back end Express server.
 - Followed traditional "silo" method for  our front end.
