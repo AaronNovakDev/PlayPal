@@ -1,17 +1,20 @@
-#parks{
-    margin:left;
-}
+// #parks{
+//     margin:left;
+// }
 
 .inner{
-    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
     background: white;
     box-sizing: border-box;
-    padding: 40px;
-    margin:left;
+    width: 80%;
+    border: 10px solid #d4d4d4;
+    padding: 25rm;
+    // margin: 20px;
+    height: 40%
+    
 }
 .title{
     font-size: 24px;
