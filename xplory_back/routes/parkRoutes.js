@@ -8,7 +8,7 @@ parksRouter.get('/', getParks)
 parksRouter.get('/:id', getPark)
 parksRouter.use(loginRequired)
 parksRouter.post('/', newPark)
-parksRouter.delete('/park/:id', removePark)
-parksRouter.put('/park/:id', changePark)
+parksRouter.delete('/:id', removePark)
+parksRouter.put('/:id', changePark)
 
 module.exports = parksRouter

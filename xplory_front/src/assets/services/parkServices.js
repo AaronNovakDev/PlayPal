@@ -19,7 +19,7 @@ export async function createPark(data){
 }
 
 export async function deletePark(id){
-    const response = await xploryBack.deletePark(`/park/${id}`)
+    const response = await xploryBack.delete(`/parks/${id}`)
     return response.data
 
 }   
